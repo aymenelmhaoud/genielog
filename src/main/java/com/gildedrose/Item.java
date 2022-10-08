@@ -4,9 +4,9 @@ package com.gildedrose;
 
 public class Item {
     public final static  String AGED_BRIE="Aged Brie";
-    final static  String  SULFURAS="Sulfuras, Hand of Ragnaros";
-    final static  String  BACKSTAGE="Backstage passes to a TAFKAL80ETC concert";
-    final static  String CAKE="Conjured Mana Cake";
+    public final static  String  SULFURAS="Sulfuras, Hand of Ragnaros";
+    public final static  String  BACKSTAGE="Backstage passes to a TAFKAL80ETC concert";
+    public final static  String CAKE="Conjured Mana Cake";
   
     public String name;
 

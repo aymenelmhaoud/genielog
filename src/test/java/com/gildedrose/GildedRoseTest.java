@@ -65,23 +65,19 @@ class GildedRoseTest {
 @DisplayName("Test  quality increases as time goes by")
 void quality_increases_in_time() {
   Item[] items = new Item[] {new Item(Item.AGED_BRIE, 2, 0),
-   new Item(Item.AGED_BRIE, 2, 50),
-   new Item(Item.BACKSTAGE, 4, 44),
-   new Item(Item.SULFURAS, 0, 50),
-   new Item(Item.AGED_BRIE, 0, 2),
-   new Item(Item.BACKSTAGE, 11, 17),
+    new Item(Item.AGED_BRIE, 2, 50),
+    new Item(Item.BACKSTAGE, 4, 44),
+    new Item(Item.SULFURAS, 0, 50),
+    new Item(Item.AGED_BRIE, 0, 2),
+    new Item(Item.BACKSTAGE, 11, 17),
     new Item(Item.BACKSTAGE, 0, 49),
     new Item(Item.SULFURAS, 0, 40),
-   
-     new Item(Item.AGED_BRIE, 1, 40),
-    
-    
-     new Item(Item.SULFURAS, -1, 49),
-    
-  };
+    new Item(Item.AGED_BRIE, 1, 40),
+    new Item(Item.SULFURAS, -1, 49),
+      
+    };
     GildedRose app = new GildedRose(items);
     app.updateQuality();
-  
     assertThat(app.items[0].quality, is(1));
     assertThat(app.items[1].quality, is(50));
     assertThat(app.items[2].quality, is(47));
@@ -101,22 +97,11 @@ void quality_increases_in_time() {
   @DisplayName("Test tostring")
   void testtostring() 
   {
-    
-    
-    Item element =  new Item ("Aged Brie",0,40  );
- 
-  
-    assertThat(element.toString(), is("Aged Brie, 0, 40"));
+      Item element =  new Item ("Aged Brie",0,40  );
+      assertThat(element.toString(), is("Aged Brie, 0, 40"));
    
-   
-    
-  
-
-  }
+    }
  
-  
-
-
 }
  
 
