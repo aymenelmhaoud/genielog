@@ -1,6 +1,6 @@
 package com.gildedrose;
 
-
+//realisé par Aymen EL MHAOUD et Soufiane CHAIEB
 
 public class Item {
     public final static  String AGED_BRIE="Aged Brie";
@@ -74,12 +74,16 @@ public class Item {
                     
            
             }
-                if(this.quality>50){
-                    this.quality=50;
-                            }  
-                if(this.quality<0){
-                    this.quality=0;
-            }
+            testQuality();
+               
     }
-    
+    private void testQuality(){
+        if(this.quality>50){
+            this.quality=50;
+                    }  
+        if(this.quality<0){
+            this.quality=0;
+    }
+
+    }
 }

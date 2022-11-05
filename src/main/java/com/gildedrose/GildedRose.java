@@ -1,5 +1,5 @@
 package com.gildedrose;
-
+//realisé par Aymen EL MHAOUD et Soufiane CHAIEB
 class GildedRose {
     Item[] items;
 
