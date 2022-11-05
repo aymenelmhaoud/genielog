@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Item.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">gilded-rose-kata</a> &gt; <a href="index.source.html" class="el_package">com.gildedrose</a> &gt; <span class="el_source">Item.java</span></div><h1>Item.java</h1><pre class="source lang-java linenums">package com.gildedrose;
+
+
+
+public class Item {
+    public final static  String AGED_BRIE=&quot;Aged Brie&quot;;
+    final static  String  SULFURAS=&quot;Sulfuras, Hand of Ragnaros&quot;;
+    final static  String  BACKSTAGE=&quot;Backstage passes to a TAFKAL80ETC concert&quot;;
+    final static  String CAKE=&quot;Conjured Mana Cake&quot;;
+  
+    public String name;
+
+    public int sellIn;
+
+    public int quality;
+
+<span class="fc" id="L17">    public Item(String name, int sellIn, int quality) {</span>
+<span class="fc" id="L18">        this.name = name;</span>
+<span class="fc" id="L19">        this.sellIn = sellIn;</span>
+<span class="fc" id="L20">        this.quality = quality;</span>
+<span class="fc" id="L21">    }</span>
+
+   @Override
+   public String toString() {
+<span class="fc" id="L25">        return this.name + &quot;, &quot; + this.sellIn + &quot;, &quot; + this.quality;</span>
+    }
+    
+    /**
+     * 
+     */
+    public void updateQuality() {
+<span class="fc bfc" id="L32" title="All 2 branches covered.">        if(this.name.equals(SULFURAS)) {</span>
+<span class="fc" id="L33">            return;</span>
+        }
+
+<span class="fc" id="L36">            this.sellIn--;</span>
+
+<span class="fc bfc" id="L38" title="All 4 branches covered.">        switch(this.name){</span>
+            case AGED_BRIE:
+<span class="fc" id="L40">                  this.quality++;</span>
+<span class="fc bfc" id="L41" title="All 2 branches covered.">                  if( this.sellIn&lt;0){</span>
+<span class="fc" id="L42">                    this.quality++;</span>
+                      }
+            break;
+            case BACKSTAGE:
+              
+<span class="fc" id="L47">                    this.quality++;</span>
+<span class="fc bfc" id="L48" title="All 2 branches covered.">                    if( this.sellIn&lt;10){</span>
+<span class="fc" id="L49">                        this.quality++;</span>
+                    }
+<span class="fc bfc" id="L51" title="All 2 branches covered.">                    if( this.sellIn&lt;5){</span>
+<span class="fc" id="L52">                        this.quality++;</span>
+                    }
+<span class="fc bfc" id="L54" title="All 2 branches covered.">                    if( this.sellIn&lt;0){</span>
+<span class="fc" id="L55">                        this.quality=0;</span>
+                    } 
+                
+            break;
+            case CAKE:
+<span class="fc bfc" id="L60" title="All 2 branches covered.">                  if(this.sellIn&lt;0){</span>
+<span class="fc" id="L61">                    this.quality-=4;</span>
+                  }else{
+<span class="fc" id="L63">                    this.quality-=2;</span>
+                  }
+<span class="fc" id="L65">            break;</span>
+                
+            default :
+<span class="fc bfc" id="L68" title="All 2 branches covered.">                    if(this.sellIn&lt;0){</span>
+<span class="fc" id="L69">                        this.quality-=2;</span>
+                    }else{
+<span class="fc" id="L71">                        this.quality-=1;</span>
+                            }
+            break; 
+                    
+           
+            }
+<span class="fc bfc" id="L77" title="All 2 branches covered.">                if(this.quality&gt;50){</span>
+<span class="fc" id="L78">                    this.quality=50;</span>
+                            }  
+<span class="fc bfc" id="L80" title="All 2 branches covered.">                if(this.quality&lt;0){</span>
+<span class="fc" id="L81">                    this.quality=0;</span>
+            }
+<span class="fc" id="L83">    }</span>
+    
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

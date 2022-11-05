@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.gildedrose.GildedRoseTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2022-10-10T22:08:18" hostname="LAPTOP-JUUC0RPS" time="0.042">
+  <properties/>
+  <testcase name="Test that the quality will decrement" classname="com.gildedrose.GildedRoseTest" time="0.022"/>
+  <testcase name="Test that the name is unchanged" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="Test  quality increases as time goes by" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="Test tostring" classname="com.gildedrose.GildedRoseTest" time="0.015"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

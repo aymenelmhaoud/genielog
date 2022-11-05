@@ -83,6 +83,7 @@ void quality_increases_in_time() {
     assertThat(app.items[2].quality, is(47));
     assertThat(app.items[3].quality, is(50));
     assertThat(app.items[4].quality, is(4));
+    assertThat(app.items[4].sellIn, is(-1));
     assertThat(app.items[5].quality, is(18));
     assertThat(app.items[6].quality, is(0));
     assertThat(app.items[7].quality, is(40));
